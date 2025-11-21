@@ -1,7 +1,9 @@
 # App ToDo list
 
 **Disciplina:** Tópicos em Engenharia da Computação II - Introdução a Programação Funcional
-**Curso:** Engenharia da Computação — Universidade Federal do Maranhão (UFMA)  
+
+**Curso:** Engenharia da Computação — Universidade Federal do Maranhão (UFMA)
+
 **Discente:** Gabriel Felipe Carvalho Silva
 
 - Link do Tutorial: `https://profsergiocosta.notion.site/Tutorial-Clojure-ClojureScript-Construindo-uma-Aplica-o-Persistente-e-Reativa-2a5cce975093807aa9f0f0cb0cf69645`
@@ -11,8 +13,8 @@
 ## Descrição
 
 Aplicação de lista de tarefas (Todo List) com backend em Clojure e frontend em ClojureScript.  
-Stack principal: Clojure / ClojureScript, Reagent 2.0 (React 18), Ring, Reitit, next.jdbc.  
-Filosofia: reatividade explícita no frontend e API REST pura no backend.
+**Stack principal**: Clojure / ClojureScript, Reagent 2.0 (React 18), Ring, Reitit, next.jdbc.  
+**Filosofia**: reatividade explícita no frontend e API REST pura no backend.
 
 ---
 
