@@ -1,55 +1,110 @@
-# App ToDo list
+# 📝 App Todo List — Programação Funcional (Clojure + ClojureScript)
 
-**Disciplina:** Tópicos em Engenharia da Computação II - Introdução a Programação Funcional
+**Disciplina:** Tópicos em Engenharia da Computação II — Introdução à Programação Funcional  
+**Curso:** Engenharia da Computação — Universidade Federal do Maranhão (UFMA)  
+**Aluno:** **Gabriel Felipe Carvalho Silva**
 
-**Curso:** Engenharia da Computação — Universidade Federal do Maranhão (UFMA)
-
-**Discente:** Gabriel Felipe Carvalho Silva
-
-- Link do Tutorial: `https://profsergiocosta.notion.site/Tutorial-Clojure-ClojureScript-Construindo-uma-Aplica-o-Persistente-e-Reativa-2a5cce975093807aa9f0f0cb0cf69645`
-
----
-
-## Descrição
-
-Aplicação de lista de tarefas (Todo List) com backend em Clojure e frontend em ClojureScript.  
-**Stack principal**: Clojure / ClojureScript, Reagent 2.0 (React 18), Ring, Reitit, next.jdbc.  
-**Filosofia**: reatividade explícita no frontend e API REST pura no backend.
+**🔗 Tutorial Original:**  
+[Tutorial Clojure/ClojureScript: Construindo uma Aplicação Persistente e Reativa](https://profsergiocosta.notion.site/Tutorial-Clojure-ClojureScript-Construindo-uma-Aplica-o-Persistente-e-Reativa-2a5cce975093807aa9f0f0cb0cf69645)
 
 ---
 
-## Tecnologias
+## 📌 Descrição do Projeto
 
-- Backend: Clojure, Ring, Reitit, next.jdbc
-- Frontend: ClojureScript, Reagent 2.0 (React 18)
-- Build / CLI: clj (Clojure CLI), shadow-cljs (para o frontend)
-- JVM: Java JDK 11+ recomendado
+Este projeto implementa uma **aplicação Todo List completa**, com:
 
-## Como Rodar
+- **Backend** em Clojure (API REST)
+- **Frontend** em ClojureScript utilizando Reagent 2.0 (React 18)
+- Persistência de dados com `next.jdbc`
+- Roteamento HTTP com Ring + Reitit
+- Frontend reativo e interação direta com a API
 
-Pré-requisitos
+Ele serve como exercício prático para introdução ao ecossistema funcional do Clojure, integrando conceitos de imutabilidade, reatividade e organização modular.
 
-- Java JDK 11 ou superior instalado
-- Clojure CLI (`clj`) instalado
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### **Backend**
+
+- Clojure
+- Ring
+- Reitit
+- next.jdbc
+
+### **Frontend**
+
+- ClojureScript
+- Reagent 2.0 (React 18)
+- shadow-cljs (build e hot-reload)
+
+### **Ferramentas / CLI**
+
+- Java JDK 11+
+- Clojure CLI (`clj`)
 - Node.js + npm (ou yarn)
-- [Opcional] Banco de dados compatível com next.jdbc (ex.: PostgreSQL)
+- shadow-cljs
 
-1. Clone o repositório
-   git clone <repo-url>
-   cd todo-app
+---
 
-2. Instalar dependências do frontend
+## ▶️ Como Rodar o Projeto
 
-   - Se houver package.json para o frontend:
-     npm install
-     (ou) yarn
+### **1. Pré-requisitos**
 
-3. Iniciar o backend (Terminal 1)
-   clj -M:run
+Antes de rodar o projeto, instale:
 
-   - Usa o alias `:run` definido em deps.edn que aponta para `todo.backend.core`.
-   - Configure variáveis de ambiente / arquivo de configuração para conexão com o DB conforme necessário (ex.: DATABASE_URL).
+- **Java JDK 11 ou superior**  
+  Verifique com:
 
-4. Iniciar o frontend (Terminal 2)
-   npx shadow-cljs watch app
-   - Ajuste o comando se o projeto usar outro nome de build no shadow-cljs.edn.
+  ```bash
+  java -version
+  ```
+
+- **Clojure CLI Tools**
+  Verifique com:
+
+```bash
+ clj -Sdescribe
+```
+
+- **Node.js + npm**
+  Verifique com:
+  ```bash
+     node -v
+     npm -v
+  ```
+
+### **2. Clonar o projeto**
+
+```bash
+git clone <repo-url>
+cd todo-app
+```
+
+### **3. Instalar dependências do frontend**
+
+```bash
+npm install
+```
+
+### **4. Iniciar o Backend (Terminal 1)**
+
+```bash
+clj -M:run
+```
+
+### **5. Iniciar o Frontend (Terminal 2)**
+
+```bash
+npx shadow-cljs watch app
+```
+
+### **3. Instalar dependências do frontend**
+
+## Estrutura esperada após subir
+
+- Backend ativo: responde na porta configurada `3000`
+
+- Frontend ativo: acessível em `localhost:8000`
+
+- Ao marcar/desmarcar uma tarefa, o frontend faz requisições REST para o backend.
