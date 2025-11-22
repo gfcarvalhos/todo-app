@@ -42,3 +42,14 @@
     (:created-at todo-map)
     ] {:returning "*"})]
   result))
+
+(defn toggle-todo!
+  "Alterna o status 'completed' de um todo no banco"
+  [id]
+  (jdbc/execute-one! db-spec ["
+    UPDATE todos
+    SET completed = (1 - completed)
+    WHERE id = ?
+    RETURNING *"
+    id
+  ]))
