@@ -76,8 +76,8 @@
 
 (defn app []
   [:div.todo-app
-    [:h1 "Todo App (Somente Frontend)"]
-    [:p "Isto é 100% local. Recarregue (F5) para ver os dados sumirem."]
+    [:h1 "Todo App"]
+    [:p "Insira abaixo a tarefa a ser realizada"]
     [todo-form]
     [todo-list]
 ])
