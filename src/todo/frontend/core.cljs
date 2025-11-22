@@ -2,12 +2,20 @@
 (:require [reagent.core :as r]
 [reagent.dom.client :as rdom]))
 
-(defn hello-world []
+(defonce app-state (r/atom 0))
+
+(defn counter-app []
 [:div 
-[:h1 "Olá, Alunos!"]
-[:p "Nossa aplicação ClojureScript está funcionando."]])
+[:h1 "Ententendo o 'r/atom'"]
+[:p "O valor atual do contador é: " @app-state]
+[:button 
+{:on-click #(swap! app-state inc)}
+"Clique para Incrementar"]
+[:button
+{:on-click #(reset! app-state 0)}
+"Resetar"]])
 
 (defn ^:export init []
-(println "Frontend App (Mini-App Local) inicializando...")
+(println "Frontend App 'Contador' inicializando...")
 (let [root (rdom/create-root (js/document.getElementById "app"))]
-(.render root (r/as-element [hello-world]))))
+(.render root (r/as-element [counter-app]))))
